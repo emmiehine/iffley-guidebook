@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>{{title}}</title>
+</head>
+
+<body ng-app="iffley-guidebook" ng-controller="MainCtrl">
+  <div class="content">
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button id="btn-login" class="btn btn-primary btn-margin">
+                      Log In
+                  </button>
+
+                  <button id="btn-logout" class="btn btn-primary btn-margin">
+                      Log Out
+                  </button>
+
+                  <span id="email-display"></span>
+              </div>
+          </div>
+      </nav>
+  </div>
+  <hr />
+
+  <h1>Iffley Problems List</h1>
+
+  <div class="col-md-4 col-sm-12">
+      <div class="btn-group paddedGroup">
+          <button id="sort-by-name-button" class="btn selectedButton">Sort by Name</button>
+          <button id="sort-by-grade-button" class="btn">Sort by Grade</button>
+      </div>
+      <div class="paddedGroup">
+          <input class="form-control" placeholder="Search by Holds" id="search-by-holds-input" />
+          <button class="btn" id="search-by-holds-button">Search</button>
+      </div>
+  </div>
+
+  <div>
+      <table id="problems-table" class="table table-sm">
+          <thead class="thead-dark">
+              <tr>
+                  <th class="col-md-3 col-sm-3">Name</th>
+                  <th class="col-md-3 col-sm-3">Grade</th>
+                  <th class="col-md-3 col-sm-3">Holds</th>
+                  <th class="col-md-3 col-sm-3">Rules</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+  </div>
+</body>
+</html>
