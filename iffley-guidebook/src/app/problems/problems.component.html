@@ -1,5 +1,10 @@
+<h2>Problems</h2>
 
-  <td>{{route.name}}</td>
-  <td>{{route.grades}}</td>
-  <td>{{route.holds}}</td>
-  <td>{{route.rules}}</td>
+<!--<ul class = "problems">-->
+  <tr *ngFor="let problem of problems">
+    <td>{{problem.name}}</td>
+    <td>{{problem.grades}}</td>
+    <td>{{problem.holds}}</td>
+    <td>{{problem.rules}}</td>
+  </tr>
+<!--</ul>-->>

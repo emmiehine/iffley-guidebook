@@ -7,6 +7,9 @@
     <title>Iffley Online Guidebook</title>
 </head>
 
+<app-problems></app-problems>
+
+<!-- Header stuff -->
 <body ng-app="iffley-guidebook" ng-controller="MainCtrl">
   <div class="content">
       <nav class="navbar navbar-default">
@@ -29,6 +32,7 @@
 
   <h1>Iffley Problems List</h1>
 
+  <!--Sort buttons-->
   <div class="col-md-4 col-sm-12">
       <div class="btn-group paddedGroup">
           <button id="sort-by-name-button" class="btn selectedButton">Sort by Name</button>
@@ -40,6 +44,7 @@
       </div>
   </div>
 
+  <!--Problems table-->
   <div>
       <table id="problems-table" class="table table-sm" style="width:100%">
           <thead class="thead-dark">
@@ -51,15 +56,41 @@
               </tr>
           </thead>
           <tbody>
+                <app-problems></app-problems>
+              <tr>
+                  <td>HI</td>
+                </tr>
             <tr>
-              <app-problems></app-problems>
+                <td>The Ladder</td>
+                <td>5c, B0</td>
+                <td>1, 2, 3, 4</td>
+                <td></td>
+            </tr>
+            <tr><app-problems></app-problems></tr>
+            <tr *ngFor="let problem of problems">
+                    <td>{{problem.name}}</td>
+                    <td>{{problem.grades}}</td>
+                    <td>{{problem.holds}}</td>
+                    <td>{{problem.rules}}</td>
+                  </tr>
+              <!--
+            <tr>
+                <div ng-repeat="problem in problems">
+                    <td>{{problem.name}}</td>
+                    <td>{{problem.grades}}</td>
+                    <td>{{problem.holds}}</td>
+                    <td>{{problem.rules}}</td>
+                </div>
+            -->
+                <!---<script src="./problems/problems.component.ts"></script>-->
+              
                <!--
                   <td>The Ladder</td>
                   <td>5c, B0</td>
                   <td>1, 2, 3, 4</td>
                   <td></td>
                -->
-            </tr>
+            <!--</tr>-->
           </tbody>
       </table>
   </div>
